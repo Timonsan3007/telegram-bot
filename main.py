@@ -3,7 +3,7 @@ nest_asyncio.apply()
 
 import asyncio
 from telegram.ext import Application, CommandHandler
-from config import TELEGRAM_TOKEN, CHAT_ID
+from config import TELEGRAM_BOT_TOKEN, CHAT_ID
 from modules.holidays import get_holiday_info
 from modules.currencies import get_all_financial_data
 from modules.weather import get_weather_and_sun_info
@@ -59,7 +59,7 @@ async def main():
     Основная функция для запуска бота.
     """
     # Создание приложения Telegram
-    application = Application.builder().token(TELEGRAM_TOKEN).build()
+    application = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
 
     # Регистрация обработчика команды /start
     application.add_handler(CommandHandler("start", start_command))

@@ -7,7 +7,7 @@ load_dotenv()
 # Конфигурация бота
 
 # Telegram
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID = int(os.getenv("CHAT_ID"))  # Преобразуем в число
 
 # API-ключи
