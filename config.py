@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
 import os
+import json
 
 # Загрузка переменных окружения из .env
 load_dotenv()
@@ -16,7 +17,7 @@ CURRENCY_API_KEY = os.getenv("CURRENCY_API_KEY")
 BITCOIN_API_URL = os.getenv("BITCOIN_API_URL")
 
 # Расписание отправки
-SCHEDULE_TIMES = eval(os.getenv("SCHEDULE_TIMES"))  # Преобразуем строку в список
+SCHEDULE_TIMES = json.loads(os.getenv("SCHEDULE_TIMES"))
 
 # URL API
 WEATHER_URL = os.getenv("WEATHER_URL")
