@@ -24,3 +24,5 @@ Desktop.ini
 .idea/
 __pycache__/
 *.pyc
+
+modules/__pycache__/
